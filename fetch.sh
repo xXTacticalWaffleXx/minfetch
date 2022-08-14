@@ -23,8 +23,8 @@ fi
 
 echo -e "\e[35m$bold $USER\e[0m$normal@\e[35m$bold$hostname$normal"
 echo -e ""
-echo -e "\e[35m$bold kernel: \e[0m$kernel"
-echo -e "\e[35m$bold uptime: \e[0m$uptime"
-echo -e "\e[35m$bold packages: \e[0m2,147,483,647 (pacman) 1 (snap)"
-echo -e "\e[35m$bold shell: \e[0m$shell"
-echo -e "\e[35m$bold distro: \e[0m$distro"
+echo -e "\e[35m$bold kernel:    \e[0m$kernel"
+echo -e "\e[35m$bold uptime:    \e[0m$uptime"
+echo -e "\e[35m$bold packages:  \e[0m2,147,483,647 (pacman) 1 (snap)"
+echo -e "\e[35m$bold shell:     \e[0m$shell"
+echo -e "\e[35m$bold distro:    \e[0m$distro"
