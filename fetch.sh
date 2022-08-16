@@ -41,7 +41,7 @@ fi
 
 echo -e "\e[35m$bold $USER\e[0m$normal@\e[35m$bold$hostname$normal"
 echo -e ""
-echo -e "\e[35m$bold kernel:    \e[0m$kernel"
+#echo -e "\e[35m$bold kernel:    \e[0m$kernel"
 echo -e "\e[35m$bold uptime:    \e[0m$uptime"
 echo -e "\e[35m$bold packages:  \e[0m$packages"
 echo -e "\e[35m$bold shell:     \e[0m$shell"
