@@ -37,11 +37,19 @@ then
     echo -e "\e[35m  / /___/ /_/ /__/ / "
     echo -e "\e[35m /_____/\____/____/  "
     echo -e ""
+elif [[ $distro == "Arch Linux" && $ascii_flag == "true" ]];
+then
+    echo -e "\e[36m    ____ _______       __"
+    echo -e "\e[36m   / __ )_  __/ |     / /"
+    echo -e "\e[36m  / __  |/ /  | | /| / / "
+    echo -e "\e[36m / /_/ // /   | |/ |/ /  "
+    echo -e "\e[36m/_____//_/    |__/|__/   "
+    echo -e ""
 fi
 
 echo -e "\e[35m$bold $USER\e[0m$normal@\e[35m$bold$hostname$normal"
 echo -e ""
-#echo -e "\e[35m$bold kernel:    \e[0m$kernel"
+echo -e "\e[35m$bold kernel:    \e[0m$kernel"
 echo -e "\e[35m$bold uptime:    \e[0m$uptime"
 echo -e "\e[35m$bold packages:  \e[0m$packages"
 echo -e "\e[35m$bold shell:     \e[0m$shell"
