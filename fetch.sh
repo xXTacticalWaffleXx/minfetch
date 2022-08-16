@@ -22,6 +22,10 @@ distro=$(head -n 1 /etc/os-release | cut -c 6- )
 #TODO: make this work with other package managers
 packages=$(pacman -Q | wc -l)
 
+if [[ $pkgmeme_flag == "true" ]]; then
+    packages="2,147,483,647"
+fi
+
 #distro logos made with https://patorjk.com/software/taag/#p=display&f=Slant&t=
 
 if [[ $distro == "EndeavourOS" && $ascii_flag == "true" ]];
