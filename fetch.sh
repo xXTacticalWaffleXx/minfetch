@@ -2,10 +2,11 @@
 
 #a simple, configurable fetch
 
-while getopts "ap" o; do
+while getopts "apd" o; do
     case $o in
         a) ascii_flag=true ;;
         p) pkgmeme_flag=true ;;
+        d) debug=true ;; # this is a debug flag used for different things at different times, do not use this outside of development, its effects will change
     esac
 done
 
@@ -54,3 +55,8 @@ echo -e "\e[35m$bold uptime:    \e[0m$uptime"
 echo -e "\e[35m$bold packages:  \e[0m$packages"
 echo -e "\e[35m$bold shell:     \e[0m$shell"
 echo -e "\e[35m$bold distro:    \e[0m$distro"
+echo -e ""
+echo -e "\e[1;30m ██\e[1;31m ██\e[1;32m ██\e[1;33m ██\e[1;34m ██\e[1;35m ██\e[1;36m ██\e[1;37m ██"
+echo -e ""
+echo -e "\e[1;90m ██\e[1;91m ██\e[1;92m ██\e[1;99m ██\e[1;94m ██\e[1;95m ██\e[1;96m ██\e[1;97m ██"
+
