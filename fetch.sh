@@ -2,6 +2,13 @@
 
 #a simple, configurable fetch
 
+while getopts "ap" o; do
+    case $o in
+        a) ascii_flag=true ;;
+        p) pkgmeme_flag=true ;;
+    esac
+done
+
 #these varibles can be inserted into echo commands to make some text bold but not the rest
 bold=$(tput bold)
 normal=$(tput sgr0)
@@ -11,11 +18,14 @@ kernel=$(uname -r)
 uptime=$(uptime | awk -F'( |,|:)+' '{print $6,$7",",$8,"hours,",$9,"minutes."}')
 shell=$($SHELL --version)
 distro=$(head -n 1 /etc/os-release | cut -c 6- )
+
 #TODO: make this work with other package managers
 packages=$(pacman -Q | wc -l)
+
 #distro logos made with https://patorjk.com/software/taag/#p=display&f=Slant&t=
 
-if [[ $distro == "EndeavourOS" && $1 == "--ascii" ]]; then
+if [[ $distro == "EndeavourOS" && $ascii_flag == "true" ]];
+then
     echo -e "\e[35m     ______     _____"
     echo -e "\e[35m    / ____/___ / ___/"
     echo -e "\e[35m   / __/ / __ \\__ \ "
