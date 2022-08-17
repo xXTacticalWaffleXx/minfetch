@@ -16,7 +16,7 @@ normal=$(tput sgr0)
 
 hostname=$(cat /proc/sys/kernel/hostname)
 kernel=$(uname -r)
-uptime=$(echo $(uptime | awk -F'( |,|:)+' '{print $6,$7",",$8,"hours,",$9,"minutes."}' | sed 's/,.*//' |sed 's/ / hours /') min)
+uptime=$(echo $(uptime -p | sed 's/up//' | sed 's/ute//'))
 shell_raw=$($SHELL --version)
 shell=$(echo $shell_raw | sed 's/h.*/h/')
 distro=$(head -n 1 /etc/os-release | cut -c 6- )
