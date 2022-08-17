@@ -2,6 +2,8 @@
 
 #a simple, configurable fetch
 
+#===================PARSES CLI SWITCHES
+
 while getopts "apd" o; do
     case $o in
         a) ascii_flag=true ;;
@@ -10,9 +12,13 @@ while getopts "apd" o; do
     esac
 done
 
+#=========================DEFINES USEFUL VARIBLES
+
 #these varibles can be inserted into echo commands to make some text bold but not the rest
 bold=$(tput bold)
 normal=$(tput sgr0)
+
+#========================GETS THE INFO TO BE DISPLAYED
 
 hostname=$(cat /proc/sys/kernel/hostname)
 kernel=$(uname -r)
@@ -21,12 +27,21 @@ shell_raw=$($SHELL --version)
 shell=$(echo $shell_raw | sed 's/h.*/h/')
 distro=$(head -n 1 /etc/os-release | cut -c 6- )
 
-#TODO: make this work with other package managers
+pacman -Q > /dev/null 2>&1 #just runs pacman to check if its installed
+if [[ $? == 0 ]]; then
 packages=$(pacman -Q | wc -l)
+else
+    apt-cache stats | head -n 1 | sed ' s/Total package names: //' | sed 's/ .*//' > /dev/null 2>&1 # checks if apt is installed
+    if [[ $? == 0 ]]; then
+        packages=$(apt-cache stats | head -n 1 | sed ' s/Total package names: //' | sed 's/ .*//')
+    fi
+fi
 
 if [[ $pkgmeme_flag == "true" ]]; then
     packages="2,147,483,647"
 fi
+
+#===========================SETS THE DISTRO LOGO
 
 #distro logos made with https://patorjk.com/software/taag/#p=display&f=Slant&t=
 
@@ -48,6 +63,9 @@ then
     echo -e ""
 fi
 
+#==========================PRINTS THE INFORMATION
+
+echo -e ""
 echo -e "\e[35m$bold $USER\e[0m$normal@\e[35m$bold$hostname$normal"
 echo -e ""
 echo -e "\e[35m$bold kernel:    \e[0m$kernel"
