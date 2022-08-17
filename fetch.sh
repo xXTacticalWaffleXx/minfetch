@@ -27,6 +27,8 @@ shell_raw=$($SHELL --version)
 shell=$(echo $shell_raw | sed 's/h.*/h/')
 distro=$(head -n 1 /etc/os-release | cut -c 6- )
 
+#todo: add portage and dnf support
+
 pacman -Q > /dev/null 2>&1 #just runs pacman to check if its installed
 if [[ $? == 0 ]]; then
 packages=$(pacman -Q | wc -l)
