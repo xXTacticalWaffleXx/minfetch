@@ -54,7 +54,6 @@ then
     echo -e "\e[35m   / __/ / __ \\__ \ "
     echo -e "\e[35m  / /___/ /_/ /__/ / "
     echo -e "\e[35m /_____/\____/____/  "
-    echo -e ""
 elif [[ $distro == "Arch Linux" && $ascii_flag == "true" ]];
 then
     echo -e "\e[36m    ____ _______       __"
@@ -62,7 +61,6 @@ then
     echo -e "\e[36m  / __  |/ /  | | /| / / "
     echo -e "\e[36m / /_/ // /   | |/ |/ /  "
     echo -e "\e[36m/_____//_/    |__/|__/   "
-    echo -e ""
 fi
 
 #==========================PRINTS THE INFORMATION
