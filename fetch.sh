@@ -10,7 +10,7 @@ while getopts "apduo" o; do
         p) pkgmeme_flag=true ;;
         d) debug=true ;; # this is a debug flag used for different things at different times, do not use this outside of development, its effects will change
         u) show_unix_time=true ;;
-        o) uwu_flag=true ;;
+        o) owo_flag=true ;;
     esac
 done
 
@@ -67,7 +67,7 @@ fi
 
 #this is here because it takes the same place as the distro logo despite not being one
 
-if [[ $uwu_flag == "true" ]]; then
+if [[ $owo_flag == "true" ]]; then
     echo -e "\e[35m   ____           ____ "
     echo -e "\e[35m  / __ \_      __/ __ \ "
     echo -e "\e[35m / / / / | /| / / / / /"
