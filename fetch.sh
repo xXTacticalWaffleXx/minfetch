@@ -4,12 +4,13 @@
 
 #===================PARSES CLI SWITCHES
 
-while getopts "apdu" o; do
+while getopts "apduo" o; do
     case $o in
         a) ascii_flag=true ;;
         p) pkgmeme_flag=true ;;
         d) debug=true ;; # this is a debug flag used for different things at different times, do not use this outside of development, its effects will change
         u) show_unix_time=true ;;
+        o) uwu_flag=true ;;
     esac
 done
 
@@ -62,6 +63,16 @@ then
     echo -e "\e[36m  / __  |/ /  | | /| / / "
     echo -e "\e[36m / /_/ // /   | |/ |/ /  "
     echo -e "\e[36m/_____//_/    |__/|__/   "
+fi
+
+#this is here because it takes the same place as the distro logo despite not being one
+
+if [[ $uwu_flag == "true" ]]; then
+    echo -e "\e[35m   ____           ____ "
+    echo -e "\e[35m  / __ \_      __/ __ \ "
+    echo -e "\e[35m / / / / | /| / / / / /"
+    echo -e "\e[35m/ /_/ /| |/ |/ / /_/ / "
+    echo -e "\e[35m\____/ |__/|__/\____/  "
 fi
 
 #==========================PRINTS THE INFORMATION
