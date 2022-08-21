@@ -2,7 +2,7 @@
 MinFetch
 </h1>
 
-<p align="center"> <img src="https://www.gnu.org/graphics/gplv3-with-text-136x68.png" alt="GPLv3 logo"></center>
+<p align="center"> <img src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png" alt="GPLv3 logo"></center>
 
 MinFetch is meant to be an easily customisable and clean fetch
 as is the UNIX™ "fuck bloat" "if you have more then 2 packages
