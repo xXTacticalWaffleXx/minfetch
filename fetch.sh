@@ -21,6 +21,8 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.If not, see < https://www.gnu.org/licenses/>.
 
+# todo: report storage space in unit of the users choice (including fogles XDDDDDD)
+# todo: add portage and dnf support
 
 #PARSES CLI SWITCHES i need to figure out how to get this at the bottom
 
@@ -62,9 +64,6 @@ uptime=$(uptime -p | sed 's/up//' | sed 's/ute//')
 shell=$($SHELL --version | sed 's/h.*/h/')
 distro=$(head -n 1 /etc/os-release | cut -c 6-)
 time=$(date +%s)
-
-# todo: report storage space in unit of the users choice (including fogles XDDDDDD)
-# todo: add portage and dnf support
 
 pacman -Q > /dev/null 2>&1 # just runs pacman to check if its installed
 if [[ $? == 0 ]]; then
