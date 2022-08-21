@@ -22,7 +22,9 @@ ill release it on the AUR in 3-5 buisness days but i would recomend just downloa
 -o adds an OwO graphic where the distro ascii goes
 
 -p sets the packages to the 32 bit signed integer limit
+
 -d is a debug flag that normally does nothing
+
 -u adds a unix time field if you want one for some reason
 
 ## Customization
