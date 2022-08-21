@@ -4,12 +4,12 @@ MinFetch
 
 <p align="center"> <img src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png" alt="GPLv3 logo"></center>
 
-MinFetch is meant to be an easily customisable and clean fetch
-as is the UNIX™ "fuck bloat" "if you have more then 2 packages
+MinFetch is meant to be an easily customisable and clean fetch.
+As is the UNIX™ "fuck bloat" "if you have more then 2 packages
 you dont deserve computers" way it doesnt have a config file
 you edit the code yourself (dw its dead easy and you can legit
 shoot me an email if you need help lmao). It also has multiple
-different switches to control its output out of the box
+different switches to control its output out of the box.
 
 ## Installation
 
