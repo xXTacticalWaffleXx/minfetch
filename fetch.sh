@@ -24,13 +24,14 @@
 
 #PARSES CLI SWITCHES i need to figure out how to get this at the bottom
 
-while getopts "apduo" o; do
+while getopts "apduoh" o; do
     case $o in
         a) ascii_flag=true ;;
         p) pkgmeme_flag=true ;;
         d) debug=true ;; # this is a debug flag used for different things at different times, do not use this outside of development, its effects will change
         u) show_unix_time=true ;;
         o) owo_flag=true ;;
+        h) help_flag=true ;;
     esac
 done
 
@@ -41,7 +42,8 @@ main () {
     echo -e "\e[35m$bold kernel:   \e[0m  $kernel"
     echo -e "\e[35m$bold uptime:   \e[0m $uptime"
     echo -e "\e[35m$bold packages: \e[0m  $packages"
-    echo -e "\e[35m$bold shell:    \e[0m  $shell" echo -e "\e[35m$bold distro:   \e[0m  $distro"
+    echo -e "\e[35m$bold shell:    \e[0m  $shell" 
+    echo -e "\e[35m$bold distro:   \e[0m  $distro"
     if [[ $show_unix_time == "true" ]]; then 
         echo -e "\e[35m$bold unix time: \e[0m $time" # this is in an if statement because it is a meme that most people arent gonna use
     fi
@@ -106,4 +108,14 @@ fi
 bold=$(tput bold)
 normal=$(tput sgr0) 
 
-main
+if [[ $help_flag == "true" ]]; then
+    # apduoh
+    echo "-a prints a distro ascii"
+    echo "-p reports int limit packages"
+    echo "-d debug flag (typically does nothing)"
+    echo "-u prints unix time"
+    echo "-o prints owo ascii"
+    echo "-h prints this help message"
+else
+    main
+fi
