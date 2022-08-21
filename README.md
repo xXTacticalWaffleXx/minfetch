@@ -31,10 +31,10 @@ make another echo command with a matching varible declaration
 (or just cheat and make it echo whatever string you want
 XDDDDDDDDD)
 
-## contributing
+## Contributing
 make ur changes, make a pr and shoot me an email or a disc msg that u made it and ill prolly merge it
 
-## contact
+## Contact
 
 email: luna-aphelion@proton.me
 discord: tactical-waffle#1560
