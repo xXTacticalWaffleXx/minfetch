@@ -15,6 +15,10 @@ to download it, to run it just do ./fetch.sh
 
 ill release it on the AUR in 3-5 buisness days but i would recomend just downloading the script becuase its easy to modify this way
 
+## Picture
+
+<img src="https://cdn.discordapp.com/attachments/799848965905842197/1010810791726940190/unknown.png" alt="a picture of the script being ran">
+
 ## Switches
 
 -a is used to add ascii art for your distro of choice
