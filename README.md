@@ -27,6 +27,8 @@ ill release it on the AUR in 3-5 buisness days but i would recomend just downloa
 
 -u adds a unix time field if you want one for some reason
 
+-h prints a help message
+
 ## Customization
 
 most edits you would want to make are really easy
