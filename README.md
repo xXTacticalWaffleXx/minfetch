@@ -19,8 +19,8 @@ different switches to control its output out of the box
 
 most edits you would want to make are really easy
 
-if you want to make it not report something, say your kernal
-comment the echo line needed for kernal
+if you want to make it not report something like your kernal,
+comment the echo line needed for the kernal
 
 if you want to fix the way it gets some info say your distro name
 find the line of code responsible for grabing that info and
