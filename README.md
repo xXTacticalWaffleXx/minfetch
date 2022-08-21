@@ -7,6 +7,13 @@ you edit the code yourself (dw its dead easy and you can legit
 shoot me an email if you need help lmao). It also has multiple
 different switches to control its output out of the box
 
+## Installation
+
+run ```curl https://raw.githubusercontent.com/xXTacticalWaffleXx/minfetch/main/fetch.sh > fetch.sh && chmod +x ./fetch.sh``` to download it
+to run it just do ./fetch.sh
+
+ill release it on the AUR in 3-5 buisness days but i would recomend just downloading the script becuase its easy to modify this way
+
 ## Switches
 
 -a is used to add ascii art for your distro of choice
