@@ -1,4 +1,4 @@
-<center> <img src="https://www.gnu.org/graphics/gplv3-with-text-136x68.png" alt="GPLv3 logo"></center>
+<p align="center"> <img src="https://www.gnu.org/graphics/gplv3-with-text-136x68.png" alt="GPLv3 logo"></center>
 
 # MinFetch
 
