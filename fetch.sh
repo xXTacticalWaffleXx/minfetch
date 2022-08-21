@@ -41,8 +41,7 @@ main () {
     echo -e "\e[35m$bold kernel:   \e[0m  $kernel"
     echo -e "\e[35m$bold uptime:   \e[0m $uptime"
     echo -e "\e[35m$bold packages: \e[0m  $packages"
-    echo -e "\e[35m$bold shell:    \e[0m  $shell"
-    echo -e "\e[35m$bold distro:   \e[0m  $distro"
+    echo -e "\e[35m$bold shell:    \e[0m  $shell" echo -e "\e[35m$bold distro:   \e[0m  $distro"
     if [[ $show_unix_time == "true" ]]; then 
         echo -e "\e[35m$bold unix time: \e[0m $time" # this is in an if statement because it is a meme that most people arent gonna use
     fi
@@ -62,7 +61,8 @@ shell=$($SHELL --version | sed 's/h.*/h/')
 distro=$(head -n 1 /etc/os-release | cut -c 6-)
 time=$(date +%s)
 
-#add portage and dnf support
+# todo: report storage space in unit of the users choice (including fogles XDDDDDD)
+# todo: add portage and dnf support
 
 pacman -Q > /dev/null 2>&1 # just runs pacman to check if its installed
 if [[ $? == 0 ]]; then
