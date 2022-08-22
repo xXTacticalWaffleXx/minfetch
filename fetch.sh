@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #copyright luna aphelion <luna-aphelion@proton.me>
 
