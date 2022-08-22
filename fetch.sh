@@ -62,7 +62,7 @@ hostname=$(cat /proc/sys/kernel/hostname)
 kernel=$(uname -r)
 uptime=$(uptime -p | sed 's/up//' | sed 's/ute//')
 shell=$($SHELL --version | sed 's/h.*/h/')
-distro=$(head -n 1 /etc/os-release | cut -c 6- | sed 's/"//')
+distro=$(head -n 1 /etc/os-release |cut -c 6- | sed 's/"//' | sed 's/"//')
 time=$(date +%s)
 
 pacman -Q > /dev/null 2>&1 # just runs pacman to check if its installed
