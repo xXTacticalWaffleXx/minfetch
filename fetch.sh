@@ -58,7 +58,7 @@ main () {
 
 # geting the info
 
-hostname=$(cat /proc/sys/kernel/hostname)
+hostname=$(cat /proc/sys/kernel/hostname | sed 's/"//')
 kernel=$(uname -r)
 uptime=$(uptime -p | sed 's/up//' | sed 's/ute//')
 shell=$($SHELL --version | sed 's/h.*/h/')
