@@ -65,12 +65,10 @@ shell=$($SHELL --version | head -n 1 | sed 's/h.*/h/')
 distro=$(head -n 1 /etc/os-release |cut -c 6- | sed 's/"//' | sed 's/"//')
 time=$(date +%s)
 
-pacman -Q > /dev/null 2>&1 # just runs pacman to check if its installed
-if [[ $? == 0 ]]; then
+if [[ -f /usr/bin/pacman ]]; then
     packages=$(pacman -Q | wc -l)
 else
-    apt-cache stats | head -n 1 | sed ' s/Total package names: //' | sed 's/ .*//' > /dev/null 2>&1 # checks if apt is installed
-    if [[ $? == 0 ]]; then
+    if [[ -f /usr/bin/apt-cache ]]; then
        packages=$(apt-cache stats | head -n 1 | sed ' s/Total package names: //' | sed 's/ .*//')
     fi
 fi
