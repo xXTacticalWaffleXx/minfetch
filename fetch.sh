@@ -67,10 +67,8 @@ time=$(date +%s)
 
 if [[ -f /usr/bin/pacman ]]; then
     packages=$(pacman -Q | wc -l)
-else
-    if [[ -f /usr/bin/apt-cache ]]; then
-       packages=$(apt-cache stats | head -n 1 | sed ' s/Total package names: //' | sed 's/ .*//')
-    fi
+elif [[ -f /usr/bin/apt-cache ]]; then
+    packages=$(apt-cache stats | head -n 1 | sed ' s/Total package names: //' | sed 's/ .*//')
 fi
 
 if [[ $pkgmeme_flag == "true" ]]; then
