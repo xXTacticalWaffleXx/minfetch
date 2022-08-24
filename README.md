@@ -58,6 +58,9 @@ XDDDDDDDDD)
 ## Contributing
 make ur changes, make a pr and shoot me an email or a disc msg that u made it and ill prolly merge it
 
+if you are on any distro that doesnt use apt or pacman please get in touch if you are ok with helping me add compatability with more distros
+all i need is for you to tell me where the package manager binary is located, the list command and then to try running the script yourself
+
 ## Contact
 
 email: luna-aphelion@proton.me
