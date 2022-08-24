@@ -69,8 +69,10 @@ if [[ -f /usr/bin/pacman ]]; then
     packages=$(pacman -Q | wc -l)
 elif [[ -f /usr/bin/apt-cache ]]; then
     packages=$(apt-cache stats | head -n 1 | sed ' s/Total package names: //' | sed 's/ .*//')
-#elif [[ -f /where/dnf/is/installed ]]; then
-#    packages=$(dnf list all | wc -l)
+elif [[ -f /usr/bin/dnf && $debug == "true"]]; then
+    packages=$(dnf list all | wc -l)
+elif [[ -f /usr/bin/portage && $debug == "true" ]]; then
+    packages=$(emerge -evp; --deep world)
 fi
 
 if [[ $pkgmeme_flag == "true" ]]; then
