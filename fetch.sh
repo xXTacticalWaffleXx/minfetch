@@ -52,11 +52,14 @@ main () {
 
 # geting the info
 
+. /etc/os-release #importing os-release so i can access the os name as a varible
+
 hostname=$(cat /proc/sys/kernel/hostname)
 kernel=$(uname -r)
 uptime=$(uptime -p | sed 's/up//' | sed 's/ute//')
 shell=$($SHELL --version | head -n 1 | sed 's/h.*/h/')
-distro=$(head -n 1 /etc/os-release |cut -c 6- | sed 's/"//' | sed 's/"//')
+distro="$NAME $VERSION"
+#distro=$(head -n 1 /etc/os-release |cut -c 6- | sed 's/"//' | sed 's/"//') #old code that doesnt need to import the os-release file
 time=$(date +%s)
 
 if [[ -f /usr/bin/pacman ]]; then
