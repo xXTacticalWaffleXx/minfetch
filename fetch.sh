@@ -1,12 +1,6 @@
 #!/usr/bin/env bash
 
-#copyright luna aphelion <luna-aphelion@proton.me>
-
-# this is a very simple script that just runs a single g++ command, its
-# just here to save the user the trouble of typing the whole command for
-# each update, i found it useful and hope you will too
-
-#Copyright(C) 2022 luna aphelion
+#Copyright(C) 2022 luna aphelion <luna-aphelion@proton.me>
 #
 #This program is free software : you can redistribute itand /or modify
 #it under the terms of the GNU General Public License as published by
@@ -72,7 +66,7 @@ elif [[ -f /usr/bin/apt-cache ]]; then
 elif [[ -f /usr/bin/dnf && $debug == "true" ]]; then
     packages=$(dnf list --installed | wc -l)
 elif [[ -f /usr/bin/portage && $debug == "true" ]]; then
-    packages=$(emerge -evp; --deep world)
+    packages=$(emerge -evp --deep world)
 fi
 
 if [[ $pkgmeme_flag == "true" ]]; then
