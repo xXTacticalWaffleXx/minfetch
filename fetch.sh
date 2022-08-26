@@ -83,14 +83,14 @@ if [[ $owo_flag == "true" ]]; then
     printf "\e[35m / / / / | /| / / / / /\n"
     printf "\e[35m/ /_/ /| |/ |/ / /_/ / \n"
     printf "\e[35m\____/ |__/|__/\____/  \n"
-elif [[ $distro == "EndeavourOS" && $ascii_flag == "true" ]];
+elif [[ $NAME == "EndeavourOS" && $ascii_flag == "true" ]];
 then
     printf "\e[35m     ______     _____\n"
     printf "\e[35m    / ____/___ / ___/\n"
     printf "\e[35m   / __/ / __ \\__ \ \n"
     printf "\e[35m  / /___/ /_/ /__/ / \n"
     printf "\e[35m /_____/\____/____/  \n"
-elif [[ $distro == "Arch Linux" && $ascii_flag == "true" ]];
+elif [[ $NAME == "Arch Linux" && $ascii_flag == "true" ]];
 then
     printf "\e[36m    ____ _______       __\n"
     printf "\e[36m   / __ )_  __/ |     / /\n"
