@@ -38,22 +38,22 @@ while getopts "apduoh" o; do
 done
 
 main () {
-    echo -e ""
-    echo -e "\e[35m$bold $USER\e[0m$normal@\e[35m$bold$hostname$normal"
-    echo -e ""
-    echo -e "\e[35m$bold kernel:   \e[0m  $kernel"
-    echo -e "\e[35m$bold uptime:   \e[0m $uptime"
-    echo -e "\e[35m$bold packages: \e[0m  $packages"
-    echo -e "\e[35m$bold shell:    \e[0m  $shell" 
-    echo -e "\e[35m$bold distro:   \e[0m  $distro"
+    printf "\n"
+    printf "\e[35m$bold $USER\e[0m$normal@\e[35m$bold$hostname$normal\n"
+    printf "\n"
+    printf "\e[35m$bold kernel:   \e[0m  $kernel\n"
+    printf "\e[35m$bold uptime:   \e[0m  $uptime\n"
+    printf "\e[35m$bold packages: \e[0m  $packages\n"
+    printf "\e[35m$bold shell:    \e[0m  $shell\n" 
+    printf "\e[35m$bold distro:   \e[0m  $distro\n"
     if [[ $show_unix_time == "true" ]]; then 
-        echo -e "\e[35m$bold unix time: \e[0m $time" # this is in an if statement because it is a meme that most people arent gonna use
+        printf "\e[35m$bold unix time: \e[0m $time\n" # this is in an if statement because it is a meme that most people arent gonna use
     fi
-    echo -e ""
-    echo -e "\e[1;30m ██\e[1;31m ██\e[1;32m ██\e[1;33m ██\e[1;34m ██\e[1;35m ██\e[1;36m ██\e[1;37m ██"
-    echo -e ""
+    printf "\n"
+    printf "\e[1;30m ██\e[1;31m ██\e[1;32m ██\e[1;33m ██\e[1;34m ██\e[1;35m ██\e[1;36m ██\e[1;37m ██\n"
+    printf "\n"
     #uncomment to print light colours
-    #echo -e "\e[1;90m ██\e[1;91m ██\e[1;92m ██\e[1;99m ██\e[1;94m ██\e[1;95m ██\e[1;96m ██\e[1;97m ██"
+    #printf "\e[1;90m ██\e[1;91m ██\e[1;92m ██\e[1;99m ██\e[1;94m ██\e[1;95m ██\e[1;96m ██\e[1;97m ██\n"
 }
 
 # geting the info
@@ -81,25 +81,25 @@ fi
 #distro logos made with https://patorjk.com/software/taag/#p=display&f=Slant&t=
 
 if [[ $owo_flag == "true" ]]; then
-    echo -e "\e[35m   ____           ____ "
-    echo -e "\e[35m  / __ \_      __/ __ \ "
-    echo -e "\e[35m / / / / | /| / / / / /"
-    echo -e "\e[35m/ /_/ /| |/ |/ / /_/ / "
-    echo -e "\e[35m\____/ |__/|__/\____/  "
+    printf "\e[35m   ____           ____ \n"
+    printf "\e[35m  / __ \_      __/ __ \ \n"
+    printf "\e[35m / / / / | /| / / / / /\n"
+    printf "\e[35m/ /_/ /| |/ |/ / /_/ / \n"
+    printf "\e[35m\____/ |__/|__/\____/  \n"
 elif [[ $distro == "EndeavourOS" && $ascii_flag == "true" ]];
 then
-    echo -e "\e[35m     ______     _____"
-    echo -e "\e[35m    / ____/___ / ___/"
-    echo -e "\e[35m   / __/ / __ \\__ \ "
-    echo -e "\e[35m  / /___/ /_/ /__/ / "
-    echo -e "\e[35m /_____/\____/____/  "
+    printf "\e[35m     ______     _____\n"
+    printf "\e[35m    / ____/___ / ___/\n"
+    printf "\e[35m   / __/ / __ \\__ \ \n"
+    printf "\e[35m  / /___/ /_/ /__/ / \n"
+    printf "\e[35m /_____/\____/____/  \n"
 elif [[ $distro == "Arch Linux" && $ascii_flag == "true" ]];
 then
-    echo -e "\e[36m    ____ _______       __"
-    echo -e "\e[36m   / __ )_  __/ |     / /"
-    echo -e "\e[36m  / __  |/ /  | | /| / / "
-    echo -e "\e[36m / /_/ // /   | |/ |/ /  "
-    echo -e "\e[36m/_____//_/    |__/|__/   "
+    printf "\e[36m    ____ _______       __\n"
+    printf "\e[36m   / __ )_  __/ |     / /\n"
+    printf "\e[36m  / __  |/ /  | | /| / / \n"
+    printf "\e[36m / /_/ // /   | |/ |/ /  \n"
+    printf "\e[36m/_____//_/    |__/|__/   \n"
 fi
 
 #distro logos made with https://patorjk.com/software/taag/#p=display&f=Slant&t=
