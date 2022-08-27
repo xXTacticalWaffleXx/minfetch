@@ -16,7 +16,7 @@
 #along with this program.If not, see < https://www.gnu.org/licenses/>.
 
 # todo: report storage space in unit of the users choice (including fogles XDDDDDD)
-# todo: add portage and dnf support
+# todo: test portage and dnf support
 
 #PARSES CLI SWITCHES i need to figure out how to get this at the bottom
 
