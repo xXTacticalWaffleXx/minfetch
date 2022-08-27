@@ -36,7 +36,7 @@ main () {
     printf "\e[35m$bold $USER\e[0m$normal@\e[35m$bold$hostname$normal\n"
     printf "\n"
     printf "\e[35m$bold kernel:   \e[0m  $kernel\n"
-    printf "\e[35m$bold uptime:   \e[0m  $uptime\n"
+    printf "\e[35m$bold uptime:  \e[0m  $uptime\n" # for some reason this line alwas has an extra whitespace before it 
     printf "\e[35m$bold packages: \e[0m  $packages\n"
     printf "\e[35m$bold shell:    \e[0m  $shell\n" 
     printf "\e[35m$bold distro:   \e[0m  $distro\n"
