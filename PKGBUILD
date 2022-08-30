@@ -8,7 +8,7 @@ url="https://github.com/xXTacticalWaffleXx/minfetch"
 license=('GPL')
 provides=("minfetch")
 conflicts=("minfetch")
-source=("https://raw.githubusercontent.com/xXTacticalWaffleXx/minfetch/main/fetch.sh")
+source=("https://raw.githubusercontent.com/xXTacticalWaffleXx/minfetch/main/minfetch")
 md5sums=('73f6f5e9aae9f847c94b678482be8b77')
 
 package() {
