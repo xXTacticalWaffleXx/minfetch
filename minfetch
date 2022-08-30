@@ -28,6 +28,7 @@ while getopts "apduoh" o; do
         u) show_unix_time=true ;;
         o) owo_flag=true ;;
         h) help_flag=true ;;
+        e) experimental_flag=true ;;
     esac
 done
 
@@ -66,9 +67,9 @@ if [[ -f /usr/bin/pacman ]]; then
     packages=$(pacman -Q | wc -l)
 elif [[ -f /usr/bin/apt-cache ]]; then
     packages=$(apt-cache stats | head -n 1 | sed ' s/Total package names: //' | sed 's/ .*//')
-elif [[ -f /usr/bin/dnf && $debug == "true" ]]; then
+elif [[ -f /usr/bin/dnf && $experimental_flag == "true" ]]; then
     packages=$(dnf list --installed | wc -l)
-elif [[ -f /usr/bin/portage && $debug == "true" ]]; then
+elif [[ -f /usr/bin/portage && $experimental_flag == "true" ]]; then
     packages=$(emerge -evp --deep world)
 fi
 
@@ -112,6 +113,7 @@ if [[ $help_flag == "true" ]]; then
     echo "-u prints unix time"
     echo "-o prints owo ascii"
     echo "-h prints this help message"
+    echo "-e enables experimental code"
 else
     main
 fi
