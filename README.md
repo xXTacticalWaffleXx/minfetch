@@ -15,7 +15,7 @@ different switches to control its output out of the box.
 
 run
 
-```curl https://raw.githubusercontent.com/xXTacticalWaffleXx/minfetch/main/fetch.sh > fetch.sh && chmod +x ./fetch.sh```
+```curl https://raw.githubusercontent.com/xXTacticalWaffleXx/minfetch/main/minfetch > minfetch && chmod +x ./minfetch```
 
 to download it, to run it just do ./fetch.sh
 
