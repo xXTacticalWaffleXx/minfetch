@@ -4,7 +4,9 @@ MinFetch
 
 <p align="center"> 
 <img src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png" alt="GPLv3 logo">
-<img src="https://raw.githubusercontent.com/xXTacticalWaffleXx/minfetch/main/aur.png" alt="get it on the aur"
+<a href="https://aur.archlinux.org/packages/minfetch"
+<img src="https://raw.githubusercontent.com/xXTacticalWaffleXx/minfetch/main/aur.png" alt="get it on the aur">
+</a>
 </center>
 
 MinFetch is meant to be an easily customisable and clean fetch.
