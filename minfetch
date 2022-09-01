@@ -20,7 +20,7 @@
 
 #PARSES CLI SWITCHES i need to figure out how to get this at the bottom
 
-while getopts "apduoh" o; do
+while getopts "apduohe" o; do
     case $o in
         a) ascii_flag=true ;;
         p) pkgmeme_flag=true ;;
