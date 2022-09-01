@@ -7,12 +7,12 @@ MinFetch
 <a href="https://aur.archlinux.org/packages/minfetch">
 <img src="https://raw.githubusercontent.com/xXTacticalWaffleXx/minfetch/main/aur.png" alt="get it on the aur">
 </a>
-</center>
+</p>
 
 MinFetch is meant to be an easily customisable and clean fetch.
-As is the UNIX™ "fuck bloat" "if you have more then 2 packages
-you dont deserve computers" way it doesnt have a config file
-you edit the code yourself (dw its dead easy and you can legit
+As is the UNIX™ "fuck bloat" "if you have more than 2 packages
+you don't deserve computers" way it doesn't have a config file
+you edit the code yourself (dw its dead easy, and you can legit
 shoot me an email if you need help lmao). It also has multiple
 different switches to control its output out of the box.
 
@@ -20,11 +20,14 @@ different switches to control its output out of the box.
 
 run
 
-```curl https://raw.githubusercontent.com/xXTacticalWaffleXx/minfetch/main/minfetch > minfetch && chmod +x ./minfetch```
+```bash
+curl https://raw.githubusercontent.com/xXTacticalWaffleXx/minfetch/main/minfetch > minfetch && chmod +x ./minfetch
+```
 
-to download it, to run it just do ./fetch.sh
+to download it, to run it just do ./minfetch
 
-ill release it on the AUR in 3-5 buisness days but i would recomend just downloading the script becuase its easy to modify this way
+I'll release it on the AUR in 3-5 business days, but I would recommend just downloading the script because it's easy to
+modify this way
 
 ## Picture
 
@@ -36,7 +39,7 @@ ill release it on the AUR in 3-5 buisness days but i would recomend just downloa
 
 -o adds an OwO graphic where the distro ascii goes
 
--p sets the packages to the 32 bit signed integer limit
+-p sets the packages to the 32-bit signed integer limit
 
 -d is a debug flag that normally does nothing
 
@@ -48,23 +51,23 @@ ill release it on the AUR in 3-5 buisness days but i would recomend just downloa
 
 most edits you would want to make are really easy
 
-if you want to make it not report something like your kernal,
-comment the echo line needed for the kernal
+if you want to make it not report something like your kernel, comment the echo line needed for the kernel
 
-if you want to fix the way it gets some info say your distro name
-find the line of code responsible for grabing that info and
-change the command
+if you want to fix the way it gets some info say your distro name, find the line of code responsible for grabbing that
+info and change the command
 
 want to add more info
 make another echo command with a matching varible declaration
-(or just cheat and make it echo whatever string you want
-XDDDDDDDDD)
+(or just cheat and make it echo whatever string you want XDDDDDDDDD)
 
 ## Contributing
-make ur changes, make a pr and shoot me an email or a disc msg that u made it and ill prolly merge it
 
-if you are on any distro that doesnt use apt or pacman please get in touch if you are ok with helping me add compatability with more distros
-all i need is for you to tell me where the package manager binary is located, the list command and then to try running the script yourself
+make ur changes, make a pr and shoot me an email or a disc msg that u made it, and I'll prolly merge it
+
+if you are on any distro that doesn't use apt or pacman please get in touch if you are ok with helping me add
+compatability with more distros
+all I need is for you to tell me where the package manager binary is located, the list command and then to try running
+the script yourself
 
 ## Contact
 
