@@ -47,6 +47,8 @@ modify this way
 
 -h prints a help message
 
+-e enables experimental code, in this case fedora and gentoo package counts
+
 ## Customization
 
 most edits you would want to make are really easy
