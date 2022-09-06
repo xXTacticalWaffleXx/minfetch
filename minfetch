@@ -72,7 +72,7 @@ if [[ -f /usr/bin/pacman ]]; then
 elif [[ -f /usr/bin/apt-cache ]]; then
 	packages=$(apt-cache stats | head -n 1 | sed ' s/Total package names: //' | sed 's/ .*//')
 elif [[ -f /usr/bin/dnf && $experimental_flag == "true" ]]; then
-	packages=$(dnf list --installed | wc -l)
+	packages=$(rpm -qa | wc -l)
 elif [[ -f /usr/bin/portage && $experimental_flag == "true" ]]; then
 	packages=$(emerge -evp --deep world)
 fi
