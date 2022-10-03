@@ -116,6 +116,8 @@ if [[ $help_flag == "true" ]]; then
 	echo "-o prints owo ascii"
 	echo "-h prints this help message"
 	echo "-e enables experimental code"
+	echo ""
+	echo "this code is under the GPLv3 a copy of which can be found at <gnu.org/licences>"
 else
 	main
 fi
