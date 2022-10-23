@@ -72,3 +72,7 @@ the script yourself
 
 email: luna-aphelion@proton.me
 discord: tactical-waffle#1560
+
+## Footnotes
+
+get it on the AUR button is under the Creative Commons Attribution-ShareAlike 4.0 International License.
