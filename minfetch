@@ -109,6 +109,7 @@ normal=$(tput sgr0)
 
 if [[ $help_flag == "true" ]]; then
 	# apduoh
+	echo "Minfetch v1.2.1"
 	echo "-a prints a distro ascii"
 	echo "-p reports int limit packages"
 	echo "-d debug flag (typically does nothing)"
